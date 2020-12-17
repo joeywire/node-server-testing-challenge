@@ -6,9 +6,6 @@
     "test": "cross-env DB_ENV=testing jest --watch --runInBand --verbose",
     "server": "nodemon index.js"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/node-server-testing.git"
