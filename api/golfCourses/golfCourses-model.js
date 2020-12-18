@@ -2,7 +2,8 @@ const db = require('../../data/dbConfig');
 
 module.exports = {
   getAll,
-  addCourse
+  addCourse, 
+  deleteCourse, 
 };
 
 function getAll() {
@@ -13,3 +14,8 @@ async function addCourse(course) {
   const [id] = await db('courses').insert(course); 
   return db('courses').where({id}).first();
 }
+
+function deleteCourse(id) {
+  return db('courses').where('id', id);
+}
+
